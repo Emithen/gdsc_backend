@@ -21,6 +21,9 @@ from questions import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('questions/', views.question_list),
-    path('questions/<int:question_id>', views.question_detail),
+    path('questions/<int:question_id>/', views.question_detail),
     path('questions/create', views.question_create),
+    path('questions/<int:question_id>/delete', views.question_delete),
+    path('questions/<int:question_id>/update', views.question_update),
+    path('questions/<int:question_id>/answer_create', views.answer_create),
 ]
